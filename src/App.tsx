@@ -1,6 +1,7 @@
 import { BrowserRouter } from "react-router-dom";
 import * as c from "./App.styles"
 import { Header } from "./components/header";
+import { PublicRoutes } from "./routes/publicRoutes";
 
 const App = () => {
   return (
@@ -9,6 +10,7 @@ const App = () => {
       <c.HeaderArea>
         <Header/>
       </c.HeaderArea>
+      <PublicRoutes/>
     </c.PageArea>
     </BrowserRouter>
   );

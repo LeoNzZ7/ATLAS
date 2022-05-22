@@ -2,8 +2,11 @@ import * as c from './styles';
 import { Link } from 'react-router-dom';
 import { MagnifyingGlass, User } from 'phosphor-react';
 import { ThemeSwitcher } from '../themeSwitcher';
+import {useNavigate } from 'react-router-dom';
 
 export const Header = () => {
+    const navigate = useNavigate();
+
     return(
         <c.Container>
             <c.TitleArea>
@@ -19,9 +22,9 @@ export const Header = () => {
                 </ul>
             </c.LinksArea> 
             <c.MenuArea>
-                <MagnifyingGlass className='icon' size={30} weight="bold" />
-                <User className='icon' size={30} weight="bold" />
-                <ThemeSwitcher />
+                <MagnifyingGlass className='icon' size={25} weight="bold" />
+                <User className='icon' onClick={e => navigate('/form')} size={25} weight="bold" />
+                <ThemeSwitcher/>
             </c.MenuArea>
         </c.Container>
     );

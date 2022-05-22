@@ -26,7 +26,7 @@ export const LinksArea = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0px 20px;
+    padding: 0px 30px;
 
     ul {
         list-style: none;
