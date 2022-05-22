@@ -5,8 +5,8 @@ export const PageArea = styled.div`
     flex-direction: column;
 `;
 
-export const HeaderArea = styled.div`
+export const HeaderArea = styled.div<{theme: string}>`
     height: 75px;
-    background-color: #333;
+    background-color: ${props => props.theme === 'Dark' ? '#333' : '#fff'};
 `;
 

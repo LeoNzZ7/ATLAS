@@ -3,16 +3,18 @@ import { Link } from 'react-router-dom';
 import { MagnifyingGlass, User } from 'phosphor-react';
 import { ThemeSwitcher } from '../themeSwitcher';
 import {useNavigate } from 'react-router-dom';
+import { useAppSelector } from '../../redux/hooks/useAppSelector';
 
 export const Header = () => {
     const navigate = useNavigate();
+    const themeStatus = useAppSelector(state => state.theme.status);
 
     return(
         <c.Container>
             <c.TitleArea>
                 <h1>ATLAS</h1>
             </c.TitleArea>
-            <c.LinksArea>
+            <c.LinksArea theme={themeStatus} >
                 <ul>
                     <li><Link to='/'>Página Inicial</Link></li>
                     <li><Link to='/'>Destinos</Link></li>
@@ -21,7 +23,7 @@ export const Header = () => {
                     <li><Link to='/'>Contato</Link></li>
                 </ul>
             </c.LinksArea> 
-            <c.MenuArea>
+            <c.MenuArea theme={themeStatus} >
                 <MagnifyingGlass className='icon' size={25} weight="bold" />
                 <User className='icon' onClick={e => navigate('/form')} size={25} weight="bold" />
                 <ThemeSwitcher/>

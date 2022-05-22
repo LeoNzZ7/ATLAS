@@ -13,8 +13,8 @@ export const ThemeSwitcher = () => {
     };
 
     return (
-        <c.Container onClick={handleThemeSwitcher} >
-            <c.Handler>
+        <c.Container theme={themeStatus} onClick={handleThemeSwitcher} >
+            <c.Handler theme={themeStatus} >
                 <Power size={20} weight="bold" />
             </c.Handler>
         </c.Container>

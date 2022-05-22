@@ -22,7 +22,7 @@ export const TitleArea = styled.div`
     flex: 1;
 `;
 
-export const LinksArea = styled.div`
+export const LinksArea = styled.div<{theme: string}>`
     display: flex;
     justify-content: center;
     align-items: center;
@@ -37,24 +37,24 @@ export const LinksArea = styled.div`
             padding: 0px 10px;
             
             a { 
-                color: #FFF;
+                color: ${props => props.theme === 'Dark' ? '#FFF' : '#000'};
                 text-decoration: none;
                 font-weight: bold;
-                border-bottom: 5px solid #333;
+                border-bottom: 5px solid ${props => props.theme === 'Dark' ? '#333' : '#FFF'};
                 padding-bottom: 24px;
                 text-transform: uppercase;
                 font-size: 14px;
 
                 &:hover {
                     border-bottom: 5px solid #FFA500;
-                    color: #CCC;
+                    color: ${props => props.theme === 'Dark' ? '#CCC' : '#777'};
                 };
             };
         };
     };
 `;
 
-export const MenuArea = styled.div`
+export const MenuArea = styled.div<{theme: string}>`
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -62,8 +62,8 @@ export const MenuArea = styled.div`
     cursor: pointer;
 
     .icon {
-        color: #fff;
-    }
+        color: ${props => props.theme === 'Dark' ? '#FFF' : '#000'};
+    };
 `;
 
 
