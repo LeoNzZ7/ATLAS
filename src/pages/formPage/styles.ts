@@ -1,12 +1,13 @@
 import styled from "styled-components";
 
 export const RegisterPage = styled.div`
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     display: flex;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
+    overflow: hidden;
 `;
 
 export const CreateAccountArea = styled.div<{login: boolean}>`

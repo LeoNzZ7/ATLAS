@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const PageArea = styled.div`
     display: flex;
     flex-direction: column;
+    background-color: ${props => props.theme === 'Dark' ? '#333' : '#FFF'};
 `;
 
 export const HeaderArea = styled.div<{theme: string}>`

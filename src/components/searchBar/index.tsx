@@ -4,7 +4,7 @@ import * as c from './styles'
 
 type Props = {
     searchBar: boolean
-}
+};
 
 export const SearchBar = ({searchBar}: Props) => {
     const themeStatus = useAppSelector(state => state.theme.status);
