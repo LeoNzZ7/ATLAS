@@ -10,13 +10,13 @@ const App = () => {
   return (
     <BrowserRouter>
     <c.PageArea>
-      <c.HeaderArea theme={themeStatus} >
+      <c.HeaderArea theme={themeStatus}>
         <Header/>
       </c.HeaderArea>
       <PublicRoutes/>
     </c.PageArea>
     </BrowserRouter>
   );
-}
+};
 
 export default App;

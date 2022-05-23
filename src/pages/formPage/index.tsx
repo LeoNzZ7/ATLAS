@@ -16,7 +16,7 @@ export const FormPage = () => {
                             <h1>Entre com a sua conta</h1>
                             <div className='label' >
                                 <EnvelopeSimple size={44} className='icon' />
-                                <input type='email' autoFocus autoComplete='off' placeholder='Digite seu email'/>
+                                <input type='email' autoFocus autoComplete='off' required placeholder='Digite seu email'/>
                             </div>
                                 <div className='label'>
                                 <LockKey className='icon' size={44} />
@@ -54,7 +54,7 @@ export const FormPage = () => {
                             </div>
                             <div className='label' >
                             <EnvelopeSimple size={44} className='icon' />
-                            <input type='email' autoComplete='off' placeholder='Digite seu email'/>
+                            <input type='email' required autoComplete='off' placeholder='Digite seu email'/>
                             </div>
                             <div className='label'>
                                 <LockKey className='icon' size={44} />
