@@ -23,7 +23,7 @@ export const Container = styled.div<{searchBar: boolean, theme: string}>`
             border: 0;
             background-color: transparent;
             border: 1px solid ${props => props.theme === 'Dark' ? '#FFF' : '#333'};
-            color: #FFF;
+            color: ${props => props.theme === 'Dark' ? '#FFF' : '#000'};
             border-left: 0;
 
             &::placeholder {
