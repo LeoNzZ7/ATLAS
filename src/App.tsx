@@ -2,6 +2,7 @@ import { useState } from "react";
 import { BrowserRouter } from "react-router-dom";
 import * as c from "./App.styles"
 import { Header } from "./components/header";
+import { Place } from "./components/places";
 import { Slides } from "./components/slides";
 import { useAppSelector } from "./redux/hooks/useAppSelector";
 import { PublicRoutes } from "./routes/publicRoutes";
@@ -18,8 +19,13 @@ const App = () => {
         <Header searchBar={searchBar} setSearchBar={setSearchBar}/>
       </c.HeaderArea>
       <Slides searchBar={searchBar} />
-      <PublicRoutes/>
+      <c.PlacesArea theme={themeStatus}>
+        <h1>Destinos</h1>
+        <h3>Veja para onde você pode viajar hoje</h3>
+        <Place/>
+      </c.PlacesArea>
     </c.PageArea>
+    <PublicRoutes/>
     </BrowserRouter>
   );
 };

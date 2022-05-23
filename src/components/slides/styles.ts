@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import balneario from '../../images/balneário.images/balneario1.jpg'
-import balneario2 from '../../images/balneário.images/balneario2.png'
-import balneario3 from '../../images/balneário.images/balneario3.jpg'
+import cancun from '../../images/cancun.images/cancun1.jpg'
+import maldivas from '../../images/maldivas.images/maldivas1.jpg'
 
 export const Container = styled.div<{searchBar: boolean}>`
     height: calc(100vh - 75px);
@@ -14,8 +14,9 @@ export const SlideArea = styled.div`
     display: flex;
 `;
 
-export const Slides = styled.div<{currentSlide: 1 | 2 | 3}>`
+export const Slides = styled.div<{currentSlide: 1 | 2 | 3, theme: string}>`
     height: 100%;
+    padding: 30px;
     width: 100vw;
     background-position: center;
     background-size: cover;
@@ -27,12 +28,39 @@ export const Slides = styled.div<{currentSlide: 1 | 2 | 3}>`
 
     &:nth-child(2) {
         transform: translateX(${props => props.currentSlide === 2 ? '-100vw' : '-200vw'});
-        background-image: url(${balneario2})
+        background-image: url(${cancun})
     };
 
     &:last-child {
         transform: translateX(${props => props.currentSlide === 3 ? '-200vw' : '-300vw'});
-        background-image: url(${balneario3})
+        background-image: url(${maldivas})
+    };
+
+    div {
+        color: #FFF;
+
+        h1 {
+            font-size: 50px;
+        };
+
+        h3 {
+            margin-bottom: 40px;
+        }
+        
+        button {
+            width: 300px;
+            height: 50px;
+            background-color: #FFA500;
+            border-radius: 30px;
+            border: 1px solid ${props => props.theme === 'Dark' ? '#333' : '#FFF'};
+            cursor: pointer;
+            color: ${props => props.theme === 'Dark' ? '#333' : '#FFF'};
+            font-weight: bold;
+
+            &:hover {
+                background-color: #EE9400;
+            }
+        };
     };
 `;
 
@@ -53,6 +81,7 @@ export const slidesControl = styled.div<{theme: string}>`
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    box-shadow: 0px 0px 5px #000;
 
     div {
         width: 25px;
@@ -64,6 +93,7 @@ export const slidesControl = styled.div<{theme: string}>`
         display: flex;
         justify-content: center;
         align-items: center;
+        box-shadow: 0px 0px 3px #000;
 
         .active {
             background-color: ${props => props.theme === 'Dark' ? '#111' : '#FFF'};

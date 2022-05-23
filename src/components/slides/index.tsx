@@ -14,14 +14,26 @@ export const Slides = ({searchBar}: Props) => {
     return (
         <c.Container searchBar={searchBar}>
             <c.SlideArea>
-                <c.Slides  currentSlide={currentSlide} >
-                    
+                <c.Slides  theme={themeStatus} currentSlide={currentSlide} >
+                    <div>
+                        <h1>Balneário Camboriú</h1>
+                        <h3>Conheça Balneário Camboriú umas das melhores e mais bonitas cidades do Brasil.</h3>
+                        <button>Saiba mais</button>
+                    </div>
                 </c.Slides>
-                <c.Slides  currentSlide={currentSlide} >
-                    2
+                <c.Slides theme={themeStatus} currentSlide={currentSlide} >
+                    <div>
+                        <h1>Cancún</h1>
+                        <h3>Conheça Cancún uma das cidades mais bonitas do México e banhada pelo mar do Caribe.</h3>
+                        <button>Saiba mais</button>
+                    </div>
                 </c.Slides>
-                <c.Slides  currentSlide={currentSlide} >
-                    3
+                <c.Slides theme={themeStatus} currentSlide={currentSlide} >
+                    <div>
+                        <h1>Ilhas Maldivas</h1>
+                        <h3>Conheça as Maldivas e suas incriveis praias</h3>
+                        <button>Saiba mais</button>
+                    </div>
                 </c.Slides>
             </c.SlideArea>
             <c.slidesControlArea theme={themeStatus} searchBar={searchBar}>
