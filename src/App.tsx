@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { BrowserRouter } from "react-router-dom";
 import * as c from "./App.styles"
+import { Contact } from "./components/contact";
 import { Feedbacks } from "./components/feedbacks";
 import { Header } from "./components/header";
 import { Packges } from "./components/packges";
@@ -36,9 +37,13 @@ const App = () => {
         <h3>Avalições dos nossos clientes</h3>
         <Feedbacks/>
       </c.FeedbacksArea>
-      <c.Contact>
-        ...
+      <c.Contact theme={themeStatus}>
+        <h1>Fale conosco</h1>
+        <Contact/>
       </c.Contact>
+      <footer>
+        Copyright (c) 2022 Leonardo Nunes Martinha
+      </footer>
     </c.PageArea>
     <PublicRoutes/>
     </BrowserRouter>

@@ -15,7 +15,7 @@ export const SearchBar = ({searchBar}: Props) => {
                 <button>
                     <MagnifyingGlass className='icon' size={20} weight="bold" />
                 </button>
-                <input type='text' placeholder='Pesquisar'/>
+                <input type='search' placeholder='Pesquisar'/>
             </form>
         </c.Container>
     );

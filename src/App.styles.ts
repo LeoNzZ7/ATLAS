@@ -4,6 +4,10 @@ export const PageArea = styled.div<{theme: string}>`
     display: flex;
     flex-direction: column;
     background-color: ${props => props.theme === 'Dark' ? '#333' : '#FFF'};
+
+    footer {
+        color: ${props => props.theme === 'Dark' ? '#FFF' : '#000'};
+    };
 `;
 
 export const HeaderArea = styled.div<{theme: string}>`
@@ -55,6 +59,13 @@ export const FeedbacksArea = styled.div<{theme: string}>`
     };
 `;
 
-export const Contact = styled.div`
-    background-color: ${props => props.theme === 'Dark' ? '#333' : '#FFF'};
+export const Contact = styled.div<{theme: string}>`
+    text-align: center;
+    border-top: 2px solid #000;
+    color: ${props => props.theme === 'Dark' ? '#FFF' : '#333'};
+    margin-top: 50px;
+    
+    h1 {
+        margin-top: 20px;
+    }    
 `;

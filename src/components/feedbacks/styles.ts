@@ -18,7 +18,6 @@ export const Container = styled.div<{theme: string}>`
         margin: 0px 20px;
         padding: 20px;
         border-radius: 20px;
-        height: 325px;
     };
 
     .icon {
