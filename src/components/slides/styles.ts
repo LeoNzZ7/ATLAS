@@ -9,7 +9,7 @@ export const Container = styled.div<{searchBar: boolean}>`
 `;
 
 export const SlideArea = styled.div`
-    height: 100%;
+    height: 550px;
     width: 300vw;
     display: flex;
 `;

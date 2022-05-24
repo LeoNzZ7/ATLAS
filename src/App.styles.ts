@@ -1,9 +1,8 @@
 import styled from "styled-components";
 
-export const PageArea = styled.div`
+export const PageArea = styled.div<{theme: string}>`
     display: flex;
     flex-direction: column;
-    height: 2000px;
     background-color: ${props => props.theme === 'Dark' ? '#333' : '#FFF'};
 `;
 
@@ -15,6 +14,20 @@ export const HeaderArea = styled.div<{theme: string}>`
 `;
 
 export const PlacesArea = styled.div<{theme: string}>`
+    text-align: center;
+    color: ${props => props.theme === 'Dark' ? '#FFF' : '#000'};
+
+    h1 {
+        margin: 20px 0px;
+    };
+
+    h3 {
+        margin: 0px;
+        margin-bottom: 20px;
+    };
+`;
+
+export const PackgeArea = styled.div<{theme: string}>`
     text-align: center;
     color: ${props => props.theme === 'Dark' ? '#FFF' : '#333'};
 
@@ -28,3 +41,20 @@ export const PlacesArea = styled.div<{theme: string}>`
     };
 `;
 
+export const FeedbacksArea = styled.div<{theme: string}>`
+    text-align: center;
+    color: ${props => props.theme === 'Dark' ? '#FFF' : '#333'};
+
+    h1 {
+        margin: 20px 0px;
+    };
+
+    h3 {
+        margin: 0px;
+        margin-bottom: 20px;
+    };
+`;
+
+export const Contact = styled.div`
+    background-color: ${props => props.theme === 'Dark' ? '#333' : '#FFF'};
+`;

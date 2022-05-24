@@ -32,7 +32,7 @@ type CytisType = {
 export const citys: CytisType[] = [
     {cityName: 'Balneário Camboriú', country: 'Brasil', img: [balneario1, balneario2, balneario3]},
     {cityName: 'Cancún', country: 'México', img: [cancun1, cancun2, cancun3]},
-    {cityName: 'Dubai', country: 'Emirados Árabes Unidos', img: [dubai1, dubai2, dubai3]},
+    {cityName: 'Dubai', country: 'Emirados Árabes', img: [dubai1, dubai2, dubai3]},
     {cityName: 'Los Angeles', country: 'Estados Unidos', img: [losageles1, losageles2, losageles3]},
     {cityName: 'Ilhas Maldivas', country: 'Maldivas', img: [maldivas1, maldivas2, maldivas3]},
     {cityName: 'Miami', country: 'Estados Unidos', img: [miami1, miami2, miami3]},
